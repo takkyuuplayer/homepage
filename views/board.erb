@@ -1,0 +1,46 @@
+<%= erb :header %>
+
+<div class="row-fluid">
+  <div class="span3">
+    <ul class="nav nav-tabs nav-stacked">
+      <li class="nav-header">Java Applet</li>
+      <li><a href="/webapp/under99">Under99</a></li>
+      <li><a href="/webapp/tape">テープメッセージ</a></li>
+      <li><a href="/webapp/imginfo">画像の情報局</a></li>
+      <li><a href="/webapp/organ">電子オルガン</a></li>
+      <li class="active"><a href="/webapp/board">電光掲示板</a></li>
+      <li class="nav-header">Web Apps</li>
+      <li><a target="_blank" href="http://atetter.takkyuuplayer.com/">当てったー</a></li>
+    </ul>
+  </div>
+
+  <div class="span9">
+    <section>
+    <legend><h4>電光掲示板</h4></legend>
+    <p>
+    2006.09.26
+    メッセージが流れてるだけ
+    最終Version.
+    </p>
+
+    <p>
+      <applet codebase="/java/" code="ElectricBulletinBoard.class" width="500" height="50">
+      <param name="number"    value="4">height<!-- メッセージ数 -->
+      <param name="speed"     value="10">メッセージ<!-- 移動スピード -->
+      <param name="message0"  value="Hello, everyone!">everyone    <!-- メッセージ設定 -->
+      <param name="message1"  value="Welcome to my homepage.">
+      <param name="message2"  value="I'll help you to Study !!">
+      <param name="message3"  value="Thank you.">
+      <param name="mesh"      value="6">Thank<!-- メッシュ間隔 -->
+      <param name="step"      value="2">メッシュ<!-- 描画間隔 -->
+      <param name="font"      value="Courier">param<!-- フォント -->
+      </applet>
+    </p>
+    </section>
+  </div>
+</div>
+
+<%= erb :footer %>
+
+
+

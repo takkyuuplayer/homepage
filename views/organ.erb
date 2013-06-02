@@ -1,0 +1,38 @@
+<%= erb :header %>
+
+<div class="row-fluid">
+  <div class="span3">
+    <ul class="nav nav-tabs nav-stacked">
+      <li class="nav-header">Java Applet</li>
+      <li class="active"><a href="/webapp/under99">Under99</a></li>
+      <li><a href="/webapp/tape">テープメッセージ</a></li>
+      <li><a href="/webapp/imginfo">画像の情報局</a></li>
+      <li><a href="/webapp/organ">電子オルガン</a></li>
+      <li><a href="/webapp/board">電光掲示板</a></li>
+      <li class="nav-header">Web Apps</li>
+      <li><a target="_blank" href="http://atetter.takkyuuplayer.com/">当てったー</a></li>
+    </ul>
+  </div>
+
+  <div class="span9">
+    <section>
+    <legend><h4>電子オルガン</h4></legend>
+    <p>
+2006.09.23
+左クリックで音を出す，右クリックで音を出しっぱなしにする
+最終Version. 
+
+
+    </p>
+
+    <p>
+<applet codebase="/java/" code="Piano" width="400" height="140"></applet>
+    </p>
+    </section>
+  </div>
+</div>
+
+<%= erb :footer %>
+
+
+

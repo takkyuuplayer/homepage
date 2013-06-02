@@ -11,6 +11,14 @@ get '/webapp' do
   erb :webapp
 end
 
+get '/webapp/:name' do |app|
+  erb app.to_sym
+end
+
+get '/software' do
+  erb :software
+end
+
 get '/author' do
   erb :author
 end

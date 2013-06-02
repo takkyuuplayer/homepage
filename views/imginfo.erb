@@ -1,0 +1,46 @@
+<%= erb :header %>
+
+<div class="row-fluid">
+  <div class="span3">
+    <ul class="nav nav-tabs nav-stacked">
+      <li class="nav-header">Java Applet</li>
+      <li><a href="/webapp/under99">Under99</a></li>
+      <li><a href="/webapp/tape">テープメッセージ</a></li>
+      <li class="active"><a href="/webapp/imginfo">画像の情報局</a></li>
+      <li><a href="/webapp/organ">電子オルガン</a></li>
+      <li><a href="/webapp/board">電子掲示板</a></li>
+      <li class="nav-header">Web Apps</li>
+      <li><a target="_blank" href="http://atetter.takkyuuplayer.com/">当てったー</a></li>
+    </ul>
+  </div>
+
+  <div class="span9">
+    <section>
+    <legend><h4>画像の情報局</h4></legend>
+    <p>
+    2006.09.23
+    絵の上にマウスを当てると説明が出てくる。
+    最終Version.
+    </p>
+
+    <p>
+      <applet codebase="/java/" code="ImageInformation.class" width="400" height="240">
+        <param name="number" value="8">   <!-- データ数 -->
+        <param name="data0" value="030,030,image/ImageInformation/apple-t.gif,りんご">
+        <param name="data1" value="120,060,image/ImageInformation/banana-t.gif,バナナ">
+        <param name="data2" value="300,040,image/ImageInformation/cherry-t.gif,チェリー">
+        <param name="data3" value="060,140,image/ImageInformation/kaki-t.gif,かき">
+        <param name="data4" value="200,130,image/ImageInformation/pear-t.gif,なし">
+        <param name="data5" value="300,180,image/ImageInformation/strawberry-t.gif,イチゴ">
+        <param name="data6" value="040,180,image/ImageInformation/tree.gif,木">
+        <param name="data7" value="200,050,image/ImageInformation/monkey.gif,サル">
+      </applet>
+    </p>
+    </section>
+  </div>
+</div>
+
+<%= erb :footer %>
+
+
+

@@ -1,0 +1,35 @@
+<%= erb :header %>
+
+<div class="row-fluid">
+  <div class="span3">
+    <ul class="nav nav-tabs nav-stacked">
+      <li class="nav-header">Java Applet</li>
+      <li class="active"><a href="/webapp/under99">Under99</a></li>
+      <li><a href="/webapp/tape">テープメッセージ</a></li>
+      <li><a href="/webapp/imginfo">画像の情報局</a></li>
+      <li><a href="/webapp/organ">電子オルガン</a></li>
+      <li><a href="/webapp/board">電光掲示板</a></li>
+      <li class="nav-header">Web Apps</li>
+      <li><a target="_blank" href="http://atetter.takkyuuplayer.com/">当てったー</a></li>
+    </ul>
+  </div>
+
+  <div class="span9">
+    <section>
+    <legend><h4>Under99</h4></legend>
+    <p>
+    2004/05/20
+    トランプの合計を99以上にしたほうが負けです。
+    Jokerは何でもOKです。計算は各自で行ってください。
+    </p>
+
+    <p>
+    <applet codebase="/java/" code="under99.class" width="800" height="600"></applet>
+    </p>
+    </section>
+  </div>
+</div>
+
+<%= erb :footer %>
+
+
