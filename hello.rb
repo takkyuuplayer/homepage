@@ -19,6 +19,10 @@ get '/software' do
   erb :software
 end
 
+get '/future' do
+  erb :future
+end
+
 get '/author' do
   erb :author
 end
