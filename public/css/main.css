@@ -14,3 +14,9 @@ article.history .text {
 section {
     padding-bottom: 20px;
 }
+
+#links img {
+    height: 62px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
