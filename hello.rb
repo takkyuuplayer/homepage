@@ -7,6 +7,10 @@ get '/' do
   erb :index
 end
 
+get '/math' do
+  erb :math
+end
+
 get '/webapp' do
   erb :webapp
 end
