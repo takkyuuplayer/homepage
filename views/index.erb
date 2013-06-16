@@ -19,12 +19,14 @@
         <article class="blog">
           <legend>Blog</legend>
           <ul class="unstyled">
-            <% feed.entries.each do |entry| %>
-                <a href="<%= entry.url %>" target="_blank">
-                    <li class="date"><%= entry.published.to_s[0, 10].gsub('-', '/') %></li>
-                    <li class="text"><%= entry.title %></li>
-                </a>
-            <% end; %>
+              <% feed.entries.each do |entry| %>
+              <li>
+              <a href="<%= entry.url %>" target="_blank">
+                  <%= entry.published.to_s[0, 10].gsub('-', '/') %>
+                  <%= entry.title %>
+              </a>
+              </li>
+              <% end; %>
           </ul>
         </article>
         <article class="history">

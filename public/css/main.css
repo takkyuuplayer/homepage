@@ -3,16 +3,11 @@ article.blog ul {
     overflow:auto;
     padding-left:20px;
 }
-article.blog li.date {
-	width: 10%;
-	float: left;
-	display: block;
-	height: 30px;
+article.blog li {
+    margin-bottom: 10px;
 }
-article.blog li.text {
-	width: 75%;
+article.blog li a {
 	display: block;
-	height: 30px;
 }
 article.history ul {
     height:12em;
@@ -20,9 +15,7 @@ article.history ul {
     padding-left:20px;
 }
 article.history li.text {
-	width: 75%;
-	display: block;
-	height: 30px;
+    margin-bottom: 10px;
 }
 
 .baseline-middle {
