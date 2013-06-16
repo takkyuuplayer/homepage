@@ -1,12 +1,30 @@
+article.blog ul {
+    height:12em;
+    overflow:auto;
+    padding-left:20px;
+}
+article.blog li.date {
+	width: 10%;
+	float: left;
+	display: block;
+	height: 30px;
+}
+article.blog li.text {
+	width: 75%;
+	display: block;
+	height: 30px;
+}
 article.history ul {
     height:12em;
     overflow:auto;
     padding-left:20px;
 }
-article.history .text {
-    padding-left:2em;
-    padding-bottom:1em;
+article.history li.text {
+	width: 75%;
+	display: block;
+	height: 30px;
 }
+
 .baseline-middle {
     padding-top: 15px;
 }

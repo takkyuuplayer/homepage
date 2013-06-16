@@ -16,6 +16,17 @@
           </div>
         </div><!--/span-->
         <div class="span9">
+        <article class="blog">
+          <legend>Blog</legend>
+          <ul class="unstyled">
+            <% feed.entries.each do |entry| %>
+                <a href="<%= entry.url %>" target="_blank">
+                    <li class="date"><%= entry.published.to_s[0, 10].gsub('-', '/') %></li>
+                    <li class="text"><%= entry.title %></li>
+                </a>
+            <% end; %>
+          </ul>
+        </article>
         <article class="history">
           <legend>History</legend>
           <ul class="unstyled">

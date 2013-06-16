@@ -2,9 +2,13 @@
 # -*- coding:utf-8 -*-
 
 require 'sinatra'
+require 'feedzirra'
+
+atom_url = 'http://blog.takkyuuplayer.com/feeds/posts/summary'
 
 get '/' do
-  erb :index
+  feed = Feedzirra::Feed.fetch_and_parse(atom_url)
+  erb :index, :locals => { :feed => feed }
 end
 
 get '/math' do
