@@ -1,13 +1,13 @@
 <%= erb :header %>
 
-      <div class="row-fluid">
-        <div class="span3">
+      <div class="row">
+        <div class="col-md-3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header">Banner</li>
+              <li>Banner</li>
               <li><img src="/img/logo.gif" class="img-rounded" width="100px"></li>
               <li><img src="/img/logo-white.gif" class="img-rounded" width="100px"></li>
-              <li class="nav-header">Recommend Browser</li>
+              <li>Recommend Browser</li>
               <li><a href="http://windows.microsoft.com/ja-jp/internet-explorer/download-ie">Internet Explorer 9+</a></li>
               <li><a href="http://www.mozilla.com/firefox/">Firefox 21+</a></li>
               <li><a href="http://www.google.co.jp/intl/ja/chrome/browser/">Chrome 27+</a></li>
@@ -15,10 +15,10 @@
             </ul>
           </div>
         </div><!--/span-->
-        <div class="span9">
+        <div class="col-md-9">
         <article class="blog">
           <legend>Blog</legend>
-          <ul class="unstyled">
+          <ul class="list-unstyled">
               <% feed.entries.each do |entry| %>
               <li>
               <a href="<%= entry.url %>" target="_blank">
@@ -31,7 +31,7 @@
         </article>
         <article class="history">
           <legend>History</legend>
-          <ul class="unstyled">
+          <ul class="list-unstyled">
             <li class="date">2013/06/15</li>
             <li class="text">Twitter Bootstrap 利用にデザイン変更</li>
             <li class="date">2011/06/04</li>

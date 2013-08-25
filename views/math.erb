@@ -1,24 +1,24 @@
 <%= erb :header %>
 
-<div class="row-fluid">
-  <div class="span3">
-    <ul class="nav nav-tabs nav-stacked">
-      <li class="nav-header">数学王国</li>
-      <li><ul class="inline">
+<div class="row">
+  <div class="col-md-3">
+    <ul class="nav nav-pills nav-stacked">
+      <li>数学王国</li>
+      <li><ul class="list-inline">
         <% 1.upto(18).each do |i|
           num = sprintf("%02d", i)
         %>
           <li><a href="#<%= num %>"><%= num %></a></li>
         <% end %>
       </ul></li>
-      <li class="nav-header">数学教室</li>
+      <li>数学教室</li>
       <li><a href="/img/math/lec_yogen.pdf" target="_blank">第一余弦定理</a></li>
       <li><a href="/img/math/lec_kansu.pdf" target="_blank">関数の対称点移動</a></li>
       <li><a href="/img/math/lec_circle.pdf" target="_blank">円に内接する四角形</a></li>
       <li><a href="/img/math/lec_senkei.pdf" target="_blank">固有ベクトル</a></li>
     </ul>
   </div>
-  <div class="span9">
+  <div class="col-md-9">
     <% 1.upto(18).each do |i|
       num = sprintf("%02d", i)
     %>
