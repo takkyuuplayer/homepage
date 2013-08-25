@@ -1,7 +1,7 @@
 <%= erb :header %>
 
-<div class="row-fluid">
-  <div class="span3">
+<div class="row">
+  <div class="col-md-3">
     <ul class="nav nav-tabs nav-stacked">
       <li class="nav-header">数学王国</li>
       <li><ul class="inline">
@@ -18,7 +18,7 @@
       <li><a href="/img/math/lec_senkei.pdf" target="_blank">固有ベクトル</a></li>
     </ul>
   </div>
-  <div class="span9">
+  <div class="col-md-9">
     <% 1.upto(18).each do |i|
       num = sprintf("%02d", i)
     %>
