@@ -17,9 +17,28 @@
         </div><!--/span-->
         <div class="col-md-9">
         <article class="blog">
+          <div class="alert alert-success" role="alert">
+            <a class="alert-link"
+              href="http://takkyuuplayer.hatenablog.com/entry/2014/12/02/010000">
+              <span class="glyphicon glyphicon-tree-conifer" aria-hidden="true"></span>
+              一人アドベントカレンダー 2014
+              実施中!!
+            </a>
+          </div>
+        </article>
+        <article class="blog">
           <legend>Blog</legend>
           <ul class="list-unstyled">
-              <% feed.entries.each do |entry| %>
+              <% hatena_feed.entries.each do |entry| %>
+              <li>
+              <a href="<%= entry.links[0] %>" target="_blank">
+                  <%= entry.updated.to_s[0, 10].gsub('-', '/') %>
+                  <%= entry.title %>
+              </a>
+              </li>
+              <% end; %>
+
+              <% google_feed.entries.each do |entry| %>
               <li>
               <a href="<%= entry.url %>" target="_blank">
                   <%= entry.published.to_s[0, 10].gsub('-', '/') %>

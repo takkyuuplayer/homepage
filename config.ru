@@ -5,10 +5,14 @@ require 'sinatra'
 require 'feedzirra'
 
 class App < Sinatra::Base
-    @@atom_url = 'http://blog.takkyuuplayer.com/feeds/posts/summary'
+    @@google_atom = 'http://blog.takkyuuplayer.com/feeds/posts/summary'
+    @@hatena_atom = 'http://takkyuuplayer.hatenablog.com/feed'
     get '/' do
-        feed = Feedzirra::Feed.fetch_and_parse(@@atom_url)
-        erb :index, :locals => { :feed => feed }
+        gf = Feedzirra::Feed.fetch_and_parse(@@google_atom)
+        hf = Feedzirra::Feed.fetch_and_parse(@@hatena_atom)
+        erb :index, :locals => { :google_feed => gf,
+                                 :hatena_feed => hf
+        }
     end
 
     get '/math' do
