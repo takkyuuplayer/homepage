@@ -2,14 +2,14 @@
 # -*- coding:utf-8 -*-
 
 require 'sinatra'
-require 'feedzirra'
+require 'feedjira'
 
 class App < Sinatra::Base
     @@google_atom = 'http://blog.takkyuuplayer.com/feeds/posts/summary'
     @@hatena_atom = 'http://takkyuuplayer.hatenablog.com/feed'
     get '/' do
-        gf = Feedzirra::Feed.fetch_and_parse(@@google_atom)
-        hf = Feedzirra::Feed.fetch_and_parse(@@hatena_atom)
+        gf = Feedjira::Feed.fetch_and_parse(@@google_atom)
+        hf = Feedjira::Feed.fetch_and_parse(@@hatena_atom)
         erb :index, :locals => { :google_feed => gf,
                                  :hatena_feed => hf
         }
