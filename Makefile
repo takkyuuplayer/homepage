@@ -5,7 +5,4 @@ install:
 	mkdir -p var/log
 
 start:
-	./start.sh
-
-stop:
-	kill `cat var/unicorn.pid`
+	bundle exec -- unicorn -c unicorn.rb config.ru
