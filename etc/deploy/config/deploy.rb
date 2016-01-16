@@ -3,7 +3,7 @@ lock '3.4.0'
 
 set :application, 'homepage'
 set :repo_url, 'git@github.com:takkyuuplayer/homepage.git'
-set :deploy_to, '/workspace/cap-deployment'
+set :deploy_to, '/workspace/deployment/homepage'
 set :linked_dirs, fetch(:linked_dirs, []).push('vendor/bundle')
 
 namespace :deploy do
