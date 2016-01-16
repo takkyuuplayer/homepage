@@ -7,16 +7,20 @@ set :deploy_to, '/workspace/cap-deployment'
 set :linked_dirs, fetch(:linked_dirs, []).push('vendor/bundle')
 
 namespace :deploy do
-  before :updated, :make_setup
   task :make_setup do
     on roles(:all) do |host|
-      within release_path do
-        execute <<-CMD
-        . /etc/profile.d/anyenv.sh
-        cd #{release_path}
-        make install
-        CMD
-      end
+      execute <<-CMD
+      . /etc/profile.d/anyenv.sh
+      cd #{release_path}
+      make install
+      CMD
+    end
+  end
+
+  before :updated, :make_setup
+  after :make_setup, :create_public_symlink do
+    on roles(:all) do |host|
+      execute "ln -s #{release_path}/public /web/homepage/public"
     end
   end
 end
