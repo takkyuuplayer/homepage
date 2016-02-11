@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'homepage'
-set :repo_url, 'git@github.com:takkyuuplayer/homepage.git'
+set :repo_url, 'https://github.com/takkyuuplayer/homepage.git'
 set :deploy_to, '/workspace/deployment/homepage'
 set :linked_dirs, fetch(:linked_dirs, []).push('vendor/bundle')
 
@@ -20,7 +20,7 @@ namespace :deploy do
   before :updated, :make_setup
   after :make_setup, :create_public_symlink do
     on roles(:all) do |host|
-      execute "ln -s #{release_path}/public /web/homepage/public"
+      execute "ln -fs #{release_path}/public /web/homepage/public"
     end
   end
 end
