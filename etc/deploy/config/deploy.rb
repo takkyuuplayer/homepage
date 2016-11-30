@@ -1,9 +1,6 @@
-# config valid only for current version of Capistrano
-lock '3.4.0'
-
 set :application, 'homepage'
 set :repo_url, 'https://github.com/takkyuuplayer/homepage.git'
-set :deploy_to, '/workspace/deployment/homepage'
+set :deploy_to, '/srv/work/deployment/homepage'
 set :linked_dirs, fetch(:linked_dirs, []).push('vendor/bundle')
 
 namespace :deploy do
@@ -12,7 +9,7 @@ namespace :deploy do
       execute <<-CMD
       . /etc/profile.d/anyenv.sh
       cd #{release_path}
-      make install
+      make setup
       CMD
     end
   end
