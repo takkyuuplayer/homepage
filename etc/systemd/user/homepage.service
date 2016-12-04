@@ -1,0 +1,10 @@
+[Unit]
+Description=takkyuuplayer's home page
+
+[Service]
+ExecReload=/bin/kill -s USR2 $MAINPID
+ExecStart=/bin/bash /srv/work/deployment/homepage/current/bin/boot-app.sh
+ExecStop=/bin/kill -s QUIT $MAINPID
+SyslogIdentifier=homepage
+Type=simple
+WorkingDirectory=/srv/work/deployment/homepage/current

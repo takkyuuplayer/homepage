@@ -20,4 +20,17 @@ namespace :deploy do
       execute "ln -fs #{fetch(:deploy_to)}/current/public /web/homepage/public"
     end
   end
+
+  after :create_public_symlink, :restart_process do
+    on roles(:all) do |host|
+      systemd_dir = "#{ENV['HOME']}/.config/systemd/user"
+      execute <<-CMD
+        mkdir -p #{systemd_dir}
+        cp #{release_path}/etc/systemd/user/homepage.service #{systemd_dir}/homepage.service
+        systemctl --user daemon-reload
+        systemctl --user enable homepage.service
+        systemctl --user restart homepage.service
+      CMD
+    end
+  end
 end
