@@ -8,3 +8,6 @@ ExecStop=/bin/kill -s QUIT $MAINPID
 SyslogIdentifier=homepage
 Type=simple
 WorkingDirectory=/srv/work/deployment/homepage/current
+
+[Install]
+WantedBy=multi-user.target
