@@ -35,10 +35,6 @@ class App < Sinatra::Base
         erb :future
     end
 
-    get '/links' do
-        erb :links
-    end
-
     get '/author' do
         erb :author
     end
