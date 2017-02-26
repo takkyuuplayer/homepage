@@ -17,7 +17,7 @@ namespace :deploy do
   before :updated, :make_setup
   after :make_setup, :create_public_symlink do
     on roles(:all) do |host|
-      execute "ln -fs #{fetch(:deploy_to)}/current/public /web/homepage/public"
+      execute "ln -fs #{fetch(:deploy_to)}/current/public /web/#{fetch(:fqdn)}/public"
     end
   end
 
