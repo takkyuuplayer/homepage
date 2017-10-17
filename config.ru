@@ -5,8 +5,11 @@ require 'sinatra'
 require 'feedjira'
 
 class App < Sinatra::Base
+    set :bind, '0.0.0.0'
+
     @@google_atom = 'http://blog.takkyuuplayer.com/feeds/posts/summary'
     @@hatena_atom = 'http://takkyuuplayer.hatenablog.com/feed'
+
     get '/' do
         gf = Feedjira::Feed.fetch_and_parse(@@google_atom)
         hf = Feedjira::Feed.fetch_and_parse(@@hatena_atom)
