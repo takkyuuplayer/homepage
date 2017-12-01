@@ -7,7 +7,7 @@ require 'feedjira'
 class App < Sinatra::Base
     set :bind, '0.0.0.0'
 
-    @@google_atom = 'http://blog.takkyuuplayer.com/feeds/posts/summary'
+    @@google_atom = 'https://takkyuuplayer.blogspot.com/feeds/posts/summary'
     @@hatena_atom = 'http://takkyuuplayer.hatenablog.com/feed'
 
     get '/' do
